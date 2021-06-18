@@ -5,10 +5,11 @@ plugins {
     id("com.android.library")
     kotlin("android")
     id("kotlin-parcelize")
-    id("dev.zacsweers.redacted")
 }
 
-redacted {
+apply(plugin = "dev.zacsweers.redacted.redacted-gradle-plugin")
+
+configure<dev.zacsweers.redacted.gradle.RedactedPluginExtension> {
     replacementString.set("***")
 }
 

@@ -1,6 +1,14 @@
 [submodule "google-services"]
 	path = google-services
 	url = ../../breadwallet/google-services.git
+    update = none
 [submodule "mobile-font"]
 	path = mobile-font
 	url = ../../breadwallet/mobile-font.git
+    update = none
+[submodule "external/walletkit"]
+	path = external/walletkit
+	url = https://github.com/blockset-corp/walletkit.git
+[submodule "external/redacted"]
+	path = external/redacted
+	url = https://github.com/ZacSweers/redacted-compiler-plugin.git

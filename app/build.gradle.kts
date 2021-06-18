@@ -9,8 +9,9 @@ plugins {
     kotlin("android")
     id("kotlin-parcelize")
     id("io.gitlab.arturbosch.detekt") version "1.0.1"
-    id("dev.zacsweers.redacted")
 }
+
+apply(plugin = "dev.zacsweers.redacted.redacted-gradle-plugin")
 
 plugins.apply(AppetizePlugin::class)
 apply(from = file("../gradle/google-services.gradle"))
@@ -19,7 +20,7 @@ apply(from = file("../gradle/copy-font-files.gradle"))
 val BDB_CLIENT_TOKEN: String by project
 val useGoogleServices: Boolean by ext
 
-redacted {
+configure<dev.zacsweers.redacted.gradle.RedactedPluginExtension> {
     replacementString.set("***")
 }
 
